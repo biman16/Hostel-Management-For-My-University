@@ -1,0 +1,38 @@
+.header-container {
+    text-align: center;
+    padding: 30px 15px 20px;
+  }
+  
+  .college-logo {
+    width: 90px;
+    margin-bottom: 10px;
+  }
+  
+  .main-heading {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 5px 0;
+  }
+  
+  .sub-heading {
+    font-size: 18px;
+    color: #475569;
+    margin-bottom: 20px;
+  }
+  
+  /* Mobile */
+  @media (max-width: 480px) {
+    .college-logo {
+      width: 70px;
+    }
+  
+    .main-heading {
+      font-size: 24px;
+    }
+  
+    .sub-heading {
+      font-size: 15px;
+    }
+  }
+  

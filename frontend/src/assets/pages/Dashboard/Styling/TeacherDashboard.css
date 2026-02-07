@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .dashboard-layout {
+    display: flex;
+    min-height: 100vh;
+    background: #f6f8fc;
+  }
+  
+  /* ===== Sidebar ===== */
+  .sidebar {
+    width: 70px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    gap: 25px;
+  }
+  
+  .sidebar-icon {
+    font-size: 22px;
+    cursor: pointer;
+    opacity: 0.6;
+  }
+  
+  .sidebar-icon.active {
+    opacity: 1;
+  }
+  
+  /* ===== Main ===== */
+  .dashboard-main {
+    flex: 1;
+    padding: 20px 30px;
+  }
+  
+  /* ===== Top Bar ===== */
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    background: #5b67f1;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 50%;
+    font-size: 14px;
+  }
+  
+  .profile {
+    font-size: 22px;
+  }
+  
+  /* ===== Title ===== */
+  .dashboard-title {
+    margin: 20px 0;
+    font-size: 32px;
+  }
+  
+  /* ===== Cards ===== */
+  .card-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .dash-card {
+    flex: 1;
+    min-width: 220px;
+    border-radius: 16px;
+    color: white;
+    padding: 20px;
+  }
+  
+  .dash-card h3 {
+    margin: 0;
+    font-size: 22px;
+  }
+  
+  .dash-card p {
+    margin: 8px 0 20px;
+    opacity: 0.9;
+  }
+  
+  .dash-card button {
+    background: rgba(255,255,255,0.25);
+    border: none;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  /* Card Colors */
+  .blue { background: #5b67f1; }
+  .green { background: #00c9a7; }
+  .orange { background: #ff7a00; }
+  
+  /* ===== Chart ===== */
+  .chart-card {
+    background: white;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 16px;
+  }
+  
+  .fake-chart {
+    margin-top: 20px;
+    height: 180px;
+    background: linear-gradient(to top right, #dbeafe, #93c5fd);
+    border-radius: 12px;
+    position: relative;
+  }
+  
+  .fake-chart .line {
+    position: absolute;
+    bottom: 30%;
+    left: 10%;
+    width: 80%;
+    height: 4px;
+    background: #4f46e5;
+  }
+  
+  /* ===== Mobile Responsive ===== */
+  @media (max-width: 768px) {
+  
+    .sidebar {
+      display: none;
+    }
+  
+    .dashboard-main {
+      padding: 15px;
+    }
+  
+    .dashboard-title {
+      font-size: 24px;
+    }
+  
+    .card-row {
+      flex-direction: column;
+    }
+  }
+  
