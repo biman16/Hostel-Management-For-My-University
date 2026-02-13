@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+/* ===== Sticky Footer Layout ===== */
+
+.page-wrapper {
+    min-height: 100vh;        /* full screen height */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .page-content {
+    flex: 1;                  /* THIS pushes footer down */
+  }

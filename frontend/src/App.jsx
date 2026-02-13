@@ -5,6 +5,7 @@ import TeacherLogin from "../src/assets/pages/TeacherLogin";
 import StudentComingSoon from "../src/assets/pages/StudentComingSoon";
 import TeacherDashboard from "./assets/pages/Dashboard/Pages/TeacherDashboard";
 import AdminDashboard from "./assets/pages/Dashboard/Pages/AdminDashboard";
+import TeacherRegister from "./assets/pages/TeacherRegister";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Route path="/student" element={<StudentComingSoon />} />
       <Route path="/teacher-dashboard" element={<TeacherDashboard />} />
       <Route path="/admin-dashboard" element={<AdminDashboard />} />
+      <Route path="/teacher-registraion" element={<TeacherRegister />} />
 
 
     </Routes>

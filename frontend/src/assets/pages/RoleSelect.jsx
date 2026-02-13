@@ -1,7 +1,10 @@
 import React from "react";
 import "../styling/RoleSelect.css";
+
+
 import { useNavigate } from "react-router-dom";
 import Header from "../componants/Header";
+import Footer from "../componants/Footer";
 
 const RoleSelect = () => {
   const navigate = useNavigate();
@@ -17,8 +20,12 @@ const RoleSelect = () => {
   };
 
   return (
+    <div className="page-wrapper">
+
+    <Header />
+
+    <main className="page-content">
     <div className="role-container">
-      <Header />
       <h2 className="subtitle">Select Your Role to Get Started</h2>
 
       <div className="card-wrapper">
@@ -47,6 +54,11 @@ const RoleSelect = () => {
         </div>
       </div>
     </div>
+    </main>
+
+    <Footer />
+
+  </div>
   );
 };
 

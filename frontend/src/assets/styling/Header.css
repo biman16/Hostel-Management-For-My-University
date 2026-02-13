@@ -1,10 +1,17 @@
 .header-container {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
     padding: 30px 15px 20px;
+  }
+
+  .heading-text {
+    text-align: left;
   }
   
   .college-logo {
-    width: 90px;
+    width: 120px;
     margin-bottom: 10px;
   }
   
@@ -23,6 +30,16 @@
   
   /* Mobile */
   @media (max-width: 480px) {
+
+    .header-container {
+      flex-direction: column;   
+      text-align: center;
+    }
+  
+    .heading-text {
+      text-align: center;
+    }
+
     .college-logo {
       width: 70px;
     }
