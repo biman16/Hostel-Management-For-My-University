@@ -23,10 +23,30 @@ const TeacherRegister = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log("Register Data:", formData);
+    try {
+      const response = await fetch("http://localhost:3000/api/auth/register-teacher", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert(data.message || "Registration successful! Waiting for admin approval.");
+        navigate("/teacher-login");
+      } else {
+        alert(data.message || "Registration failed. Please try again.");
+      }
+    } catch (error) {
+      console.error("Registration error:", error);
+      alert("An error occurred. Please try again.");
+    }
   };
 
   return (

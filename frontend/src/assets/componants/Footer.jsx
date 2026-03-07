@@ -19,7 +19,7 @@ const Footer = () => {
 
       {/* Right Section */}
       <div className="footer-right">
-        <p>© 2026 Your College Name</p>
+        <p>© 2026 UEM Jaipur</p>
         <p>Hostel Administration</p>
       </div>
 

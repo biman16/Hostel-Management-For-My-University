@@ -1,53 +1,77 @@
-import "../Styling/AdminDashboard.css";
+
+import { FaUserAlt } from "react-icons/fa";
+import logo from "../../../photos/logo.png";
+import { LoggedInHeaderAndSideBar } from "../../../componants/LoggedInHeaderAndSideBar";
+import { useNavigate } from "react-router-dom";
+
 
 const AdminDashboard = () => {
+
+  const navigate = useNavigate();
+
+  const goToTeacherAddDelete = () => {
+    navigate("/TeacherAddDelete")
+  };
+
+  const goToAdminAddDelete = () => {
+    navigate("/Admin-AddDelete")
+  };
+  
+
+
+
+
+
+
+
+
+
   return (
-    <div className="admin-layout">
+    <div className="dashboard-layout">
       
-      {/* Sidebar */}
-      <aside className="admin-sidebar">
-        <div className="side-icon active">🏠</div>
-        <div className="side-icon">💬</div>
-        <div className="side-icon">🔔</div>
-        <div className="side-icon">📅</div>
-        <div className="side-icon">🚪</div>
-      </aside>
 
-      {/* Main Content */}
-      <main className="admin-main">
+    <LoggedInHeaderAndSideBar />
+      
+      <main className="dashboard-main">
 
-        {/* Top Bar */}
-        <div className="admin-topbar">
-          <div className="logo">Logo</div>
-          <div className="profile">👤</div>
+        
+        <div className="dashboard-topbar">
+          <div className="w-[50px] md:w-[100px]"><img src={logo} alt="Logo" /></div>
+          <h1 className="text-center text-[15px] md:text-[35px]">
+        Hostel Inspection Management System
+      </h1>
+          <div className="profile"><FaUserAlt />
+          {/* <span className="">Dipta Mukherjee</span> */}
+          </div>
         </div>
+        <hr className="border-0 h-1 bg-gray-300 my-4" />
 
-        <h1 className="admin-title">Dashboard</h1>
+        <h1 className="text-[50px]  dashboard-title">Admin Dashboard</h1>
 
-        {/* Cards */}
-        <div className="admin-cards">
-          <div className="admin-card purple">
+        
+        <div className="dashboard-cards">
+          <div className="dashboard-card purple">
             <span className="card-number">1</span>
             <h3>Admins</h3>
             <p>Add & Delete Admin</p>
-            <button>Start Now →</button>
+            <button onClick={goToAdminAddDelete}>Start Now →</button>
           </div>
 
-          <div className="admin-card blue">
+          <div className="dashboard-card blue">
             <span className="card-number">2</span>
             <h3>Teachers</h3>
             <p>Add & Delete Teachers</p>
-            <button>Start Now →</button>
+            <button onClick={goToTeacherAddDelete}>Start Now →</button>
           </div>
 
-          <div className="admin-card dark">
+          <div className="dashboard-card dark">
             <span className="card-number">3</span>
             <h3>Forms</h3>
             <p>View & Download Form</p>
             <button>Start Now →</button>
           </div>
 
-          <div className="admin-card red">
+          <div className="dashboard-card red">
             <span className="card-number">4</span>
             <h3>Complaints</h3>
             <p>Forward complaint</p>
